@@ -1,0 +1,376 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#cfa138",
+              gray: "#f3f4f6",
+            },
+          },
+          container: {
+            center: true,
+            padding: "2rem",
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav class="bg-white z-50 border-gray-200 fixed w-screen border-b-2">
+      <div class="container">
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5"
+        >
+          <a href="https://flowbite.com" class="flex items-center">
+            <img
+              src="/images/logo-nav.png"
+              class="mr-3 h-12"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <button
+            data-collapse-toggle="mega-menu-full"
+            type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray"
+            aria-controls="mega-menu-full"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div
+            id="mega-menu-full"
+            class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+          >
+            <ul
+              class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <button
+                  id="mega-menu-full-dropdown-button"
+                  data-collapse-toggle="mega-menu-full-dropdown"
+                  class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
+                >
+                  Prandes
+                  <svg
+                    class="ml-1 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about.html"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                  >About-us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact.html"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 -transparent"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mega-menu-full-dropdown"
+        class="mt-1 border-gray-200 shadow-sm border-y bg-gray"
+      >
+        <div
+          class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 sm:grid-cols-2 md:px-6"
+        >
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
+              >
+                <div class="font-semibold">Rizpaille</div>
+                <span class="text-sm font-light text-gray-500">
+                  Rizpaille is the ideal new straw for all, preserving the
+                  environment, public health and total wildlife, straws are 100%
+                  biodegradable, compostable with natural colors.
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
+              >
+                <div class="font-semibold">Pectiv</div>
+                <span class="text-sm font-light text-gray-500">
+                  PECTIV sanitary pads, the leading brand in the field, has the
+                  main goal of offering you a balance between your work and
+                  personal life so you don’t face any obstacles in the way of
+                  achieving your dreams and give you the best protection ever.
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
+              >
+                <div class="font-semibold">Bazooka</div>
+                <span class="text-sm font-light text-gray-500">
+                  A German beverage company distributed in all Qatar for
+                  non-alcoholic drinks of any kind including Halal certified
+                  drinks.
+                </span>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                href="#"
+                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
+              >
+                <div class="font-semibold">Vivacola</div>
+                <span class="text-sm font-light text-gray-500">
+                  In 1938 Vivi Kola was brought onto the market by Mineralquelle
+                  Eglisau. Our drinks are bottled with less sugar and the best
+                  ingredients.
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
+              >
+                <div class="font-semibold">IPro</div>
+                <span class="text-sm font-light text-gray-500">
+                  IPRO is the leading supplier of Healthy Hydration drinks to
+                  the world of sports, health, and wellbeing. From professional
+                  athletes to leisure and education.
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
+              >
+                <div class="font-semibold">Delice</div>
+                <span class="text-sm font-light text-gray-500">
+                  Délice is a citizen brand that is very close to its consumers
+                  and cares about their health.
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END navbar -->
+
+    <!-- START HEADER -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container grid place-content-center h-screen min-h-fit">
+        <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+      >
+        <div class="font-light text-gray-500 sm:text-lg">
+          <h2
+            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
+          >
+            We didn't reinvent the wheel
+          </h2>
+          <p class="mb-4">
+            We are strategists, designers and developers. Innovators and problem
+            solvers. Small enough to be simple and quick, but big enough to
+            deliver the scope you want at the pace you need. Small enough to be
+            simple and quick, but big enough to deliver the scope you want at
+            the pace you need.
+          </p>
+          <p>
+            We are strategists, designers and developers. Innovators and problem
+            solvers. Small enough to be simple and quick.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          <img
+            class="border-2 border-primary shadow-xl w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+            alt="office content 1"
+          />
+          <img
+            class="border-2 border-primary shadow-xl mt-4 w-full lg:mt-10 rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+            alt="office content 2"
+          />
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- END HEADER -->
+
+    <!-- START footer -->
+    <footer class="p-4 bg-gray sm:p-6">
+      <div class="container">
+        <div class="mx-auto max-w-screen-xl">
+          <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+              <a href="https://flowbite.com" class="flex items-center">
+                <img
+                  src="/images/logo.png"
+                  class="mr-3 h-48"
+                  alt="FlowBite Logo"
+                />
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                  Resources
+                </h2>
+                <ul class="text-gray-600">
+                  <li class="mb-4">
+                    <a href="https://flowbite.com" class="hover:underline"
+                      >Flowbite</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://tailwindcss.com/" class="hover:underline"
+                      >Tailwind CSS</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                  Follow us
+                </h2>
+                <ul class="text-gray-600">
+                  <li class="mb-4">
+                    <a
+                      href="https://github.com/themesberg/flowbite"
+                      class="hover:underline"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://discord.gg/4eeurUVvTy"
+                      class="hover:underline"
+                      >Discord</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
+                  Legal
+                </h2>
+                <ul class="text-gray-600">
+                  <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8" />
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center"
+              >© 2022
+              <a href="https://flowbite.com" class="hover:underline"
+                >Flowbite™</a
+              >. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+              <a href="#" class="text-gray-500 hover:text-gray-900">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <span class="text-sm text-gray-500"
+              >Developed by
+              <a href="orizon.com" class="underline">
+                <strong>Orizon</strong>
+              </a></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END footer -->
+
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
