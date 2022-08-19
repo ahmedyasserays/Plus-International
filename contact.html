@@ -1,296 +1,278 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#cfa138",
-              gray: "#f3f4f6",
-            },
-          },
-          container: {
-            center: true,
-            padding: "2rem",
-          },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-pagination span {
+      background-color: #cfa138;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#cfa138",
+            gray: "#f3f4f6",
+          }
         },
-      };
-    </script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- start navbar -->
-    <nav class="bg-white z-50 border-gray-200 fixed w-screen border-b-2">
-      <div class="container">
-        <div
-          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5"
-        >
-          <a href="https://flowbite.com" class="flex items-center">
-            <img
-              src="images/logo-nav.png"
-              class="mr-3 h-12"
-              alt="Flowbite Logo"
-            />
-          </a>
-          <button
-            data-collapse-toggle="mega-menu-full"
-            type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray"
-            aria-controls="mega-menu-full"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-          <div
-            id="mega-menu-full"
-            class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
-          >
-            <ul
-              class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white"
-            >
-              <li>
-                <a
-                  href="/"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
-                  aria-current="page"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <button
-                  id="mega-menu-full-dropdown-button"
-                  data-collapse-toggle="mega-menu-full-dropdown"
-                  class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
-                >
-                  Prandes
-                  <svg
-                    class="ml-1 w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
-                  >Gallery</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
-                  >About-us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 -transparent"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
+        container: {
+          center: true,
+          padding: "1rem",
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- START LOADING -->
+  <div
+    class="loading fixed top-0 left-0 w-screen h-screen grid place-content-center z-50 backdrop-blur-md bg-black bg-opacity-50">
+    <div role="status">
+      <svg class="inline mr-2 w-10 h-10 text-gray-200 animate-spin fill-yellow-400" viewBox="0 0 100 101" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+          fill="currentColor" />
+        <path
+          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+          fill="currentFill" />
+      </svg>
+      <span class="sr-only">Loading...</span>
+    </div>
+
+  </div>
+  <!-- END LOADING -->
+
+  <!-- start navbar -->
+  <nav class="bg-white z-40 border-gray-200 fixed w-screen border-b-2">
+    <div class="container">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+        <a href="https://flowbite.com" class="flex items-center">
+          <img src="images/logo-nav.png" class="mr-3 h-12" alt="Flowbite Logo" />
+        </a>
+        <button data-collapse-toggle="mega-menu-full" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray"
+          aria-controls="mega-menu-full" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div id="mega-menu-full" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
+          <ul
+            class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+            <li>
+              <a href="/"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
+                class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
+                Brandes
+                <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Gallery</a>
+            </li>
+            <li>
+              <a href="about.html"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">About-us</a>
+            </li>
+            <li>
+              <a href="contact.html"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 -transparent">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div
-        id="mega-menu-full-dropdown"
-        class="mt-1 border-gray-200 shadow-sm border-y bg-gray"
-      >
-        <div
-          class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 sm:grid-cols-2 md:px-6"
-        >
-          <ul>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
+    </div>
+    <div id="mega-menu-full-dropdown" class="mt-1 border-gray-200 shadow-sm border-y bg-gray">
+      <div class="mx-auto max-w-screen-xl text-gray-900 md:px-6">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper py-5 px-4">
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#rizpaille"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
                 <div class="font-semibold">Rizpaille</div>
-                <span class="text-sm font-light text-gray-500">
-                  Rizpaille is the ideal new straw for all, preserving the
-                  environment, public health and total wildlife, straws are 100%
-                  biodegradable, compostable with natural colors.
-                </span>
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#pectiv"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
                 <div class="font-semibold">Pectiv</div>
-                <span class="text-sm font-light text-gray-500">
-                  PECTIV sanitary pads, the leading brand in the field, has the
-                  main goal of offering you a balance between your work and
-                  personal life so you don’t face any obstacles in the way of
-                  achieving your dreams and give you the best protection ever.
-                </span>
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#bazooka"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
                 <div class="font-semibold">Bazooka</div>
-                <span class="text-sm font-light text-gray-500">
-                  A German beverage company distributed in all Qatar for
-                  non-alcoholic drinks of any kind including Halal certified
-                  drinks.
-                </span>
               </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#vivacola"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
                 <div class="font-semibold">Vivacola</div>
-                <span class="text-sm font-light text-gray-500">
-                  In 1938 Vivi Kola was brought onto the market by Mineralquelle
-                  Eglisau. Our drinks are bottled with less sugar and the best
-                  ingredients.
-                </span>
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#ipro"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
                 <div class="font-semibold">IPro</div>
-                <span class="text-sm font-light text-gray-500">
-                  IPRO is the leading supplier of Healthy Hydration drinks to
-                  the world of sports, health, and wellbeing. From professional
-                  athletes to leisure and education.
-                </span>
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#delice"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
                 <div class="font-semibold">Delice</div>
-                <span class="text-sm font-light text-gray-500">
-                  Délice is a citizen brand that is very close to its consumers
-                  and cares about their health.
-                </span>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="swiper-button-next text-primary"></div>
+          <div class="swiper-button-prev text-primary"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-    </nav>
-    <!-- END NAVBAR -->
+    </div>
+  </nav>
+  <!-- END navbar -->
 
     <!-- START FORM -->
     <section class="bg-white pt-6">
       <div class="container">
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <div class="py-8 lg:py-16 px-4 mx-auto">
           <h2 class="my-4 text-4xl tracking-tight font-extrabold text-center">
             Contact Us
           </h2>
           <p
-            class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl"
+            class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl max-w-2xl mx-auto"
           >
             Got a technical issue? Want to send feedback about a beta feature?
             Need details about our Business plan? Let us know.
           </p>
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div>
-                <label for="email" class="block mb-1 text-sm font-medium"
-                  >Your email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  class="w-full shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary focus:border-primary block p-2.5 placeholder:italic placeholder:text-slate-400"
-                  placeholder="name@info.com"
-                  required
-                />
+          <div class="grid rever grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="cuwaw">
+              <div class="mb-3">
+                <a class="w-fit" href="tel:+97444989999"><strong>Tel: </strong><p class="text-sm w-fit italic text-slate-400"><i class="fas fa-phone-alt"></i> +974 4498 9999</p></a>
               </div>
-              <div>
-                <label for="name" class="block mb-1 text-sm font-medium"
-                  >Your Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  class="w-full shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary focus:border-primary block p-2.5 placeholder:italic placeholder:text-slate-400"
-                  placeholder="Name"
-                  required
-                />
+              <div class="mb-3">
+                <a class="w-fit" href="malito:mohamed@plustradingqa.com"><strong>Email: </strong><p class="text-sm w-fit italic text-slate-400"><i class="fas fa-envelope"></i> mohamed@plustradingqa.com</p></a>
+              </div>
+              <div class="mb-3">
+                <a class="w-fit" href="contact.html#map"><strong>Address: </strong><p class="text-sm w-fit italic text-slate-400"><i class="fas fa-map-marker-alt"></i> Fox Hills Lusail - Zone 69 - St. 112, Bldg. 59. 4th floor, Office 110, Doha-Qatar</p></a>
               </div>
             </div>
-            <div class="sm:col-span-2">
-              <label for="message" class="block mb-1 text-sm font-medium"
-                >Your message</label
-              >
-              <textarea
-                id="message"
-                rows="4"
-                class="block p-2.5 w-full text-sm bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary focus:border-primary placeholder:italic placeholder:text-slate-400"
-                placeholder="Leave a comment..."
-              ></textarea>
-            </div>
-            <div class="w-full text-center">
-              <button
-                type="submit"
-                class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary sm:w-fit hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary-300"
-              >
-                Send message
-              </button>
-            </div>
-          </form>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div>
+                  <label for="email" class="block mb-1 text-sm font-medium"
+                    >Your email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary focus:border-primary block p-2.5 placeholder:italic placeholder:text-slate-400"
+                    placeholder="name@info.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="name" class="block mb-1 text-sm font-medium"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary focus:border-primary block p-2.5 placeholder:italic placeholder:text-slate-400"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="message" class="block mb-1 text-sm font-medium"
+                  >Your message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="block p-2.5 w-full text-sm bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary focus:border-primary placeholder:italic placeholder:text-slate-400"
+                  placeholder="Leave a comment..."
+                ></textarea>
+              </div>
+              <div class="w-full text-center">
+                <button
+                  type="submit"
+                  class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary sm:w-fit hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary-300"
+                >
+                  Send message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
     <!-- END FORM -->
 
     <!-- START CONTACTS -->
-    <section class="contacts py-8 text-center bg-gray">
+    <!-- <section class="contacts py-8 text-center bg-gray">
       <div class="container">
         <h3 class="mb-4 text-3xl font-extrabold">
           Contact us with another ways
@@ -345,7 +327,7 @@
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- END CONTACTIS -->
 
     <!-- START VISIT -->
@@ -355,7 +337,7 @@
           Visit us
         </h3>
         <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8" />
-        <div class="map overflow-hidden rounded-lg border-2 border-primary">
+        <div id="map" class="overflow-hidden rounded-lg border-2 border-primary">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28851.981556231363!2d51.458601490150336!3d25.321075158364177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45db79255116ab%3A0xda445717fe9eff0c!2sMadinat%20Khalifa%2C%20Doha%2C%20Qatar!5e0!3m2!1sen!2sin!4v1601115132772!5m2!1sen!2sin"
             width="100%"
@@ -476,7 +458,9 @@
     <!-- END footer -->
 
     <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>

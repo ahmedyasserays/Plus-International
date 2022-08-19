@@ -1,269 +1,320 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#cfa138",
-              gray: "#f3f4f6",
-            },
-          },
-          container: {
-            center: true,
-            padding: "2rem",
-          },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-pagination span {
+      background-color: #cfa138;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#cfa138",
+            gray: "#f3f4f6",
+          }
         },
-      };
-    </script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- start navbar -->
-    <nav class="bg-white z-50 border-gray-200 fixed w-screen border-b-2">
-      <div class="container">
+        container: {
+          center: true,
+          padding: "1rem",
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- START LOADING -->
+  <div
+    class="loading fixed top-0 left-0 w-screen h-screen grid place-content-center z-50 backdrop-blur-md bg-black bg-opacity-50">
+    <div role="status">
+      <svg class="inline mr-2 w-10 h-10 text-gray-200 animate-spin fill-yellow-400" viewBox="0 0 100 101" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+          fill="currentColor" />
+        <path
+          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+          fill="currentFill" />
+      </svg>
+      <span class="sr-only">Loading...</span>
+    </div>
+
+  </div>
+  <!-- END LOADING -->
+
+  <!-- start navbar -->
+  <nav class="bg-white z-40 border-gray-200 fixed w-screen border-b-2">
+    <div class="container">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+        <a href="https://flowbite.com" class="flex items-center">
+          <img src="images/logo-nav.png" class="mr-3 h-12" alt="Flowbite Logo" />
+        </a>
+        <button data-collapse-toggle="mega-menu-full" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray"
+          aria-controls="mega-menu-full" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div id="mega-menu-full" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
+          <ul
+            class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+            <li>
+              <a href="/"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
+                class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
+                Brandes
+                <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Gallery</a>
+            </li>
+            <li>
+              <a href="about.html"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">About-us</a>
+            </li>
+            <li>
+              <a href="contact.html"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 -transparent">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="mega-menu-full-dropdown" class="mt-1 border-gray-200 shadow-sm border-y bg-gray">
+      <div class="mx-auto max-w-screen-xl text-gray-900 md:px-6">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper py-5 px-4">
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#rizpaille"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
+                <div class="font-semibold">Rizpaille</div>
+              </a>
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#pectiv"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
+                <div class="font-semibold">Pectiv</div>
+              </a>
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#bazooka"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
+                <div class="font-semibold">Bazooka</div>
+              </a>
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#vivacola"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
+                <div class="font-semibold">Vivacola</div>
+              </a>
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#ipro"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
+                <div class="font-semibold">IPro</div>
+              </a>
+            </div>
+            <div class="swiper-slide aspect-square rounded-xl p-2">
+              <a href="brands.html/#delice"
+                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
+                <img src="images/brands.png" alt="brand name" class="w-1/2">
+                <div class="font-semibold">Delice</div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next text-primary"></div>
+          <div class="swiper-button-prev text-primary"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- END navbar -->
+
+    <!-- START HEADER -->
+    <section class="bg-whit">
+      <div class="container grid place-content-center h-screen min-h-fit">
         <div
-          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5"
+          class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
         >
-          <a href="https://flowbite.com" class="flex items-center">
+          <div class="font-light text-gray-500 sm:text-lg">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
+            >
+              We didn't reinvent the wheel
+            </h2>
+            <p>
+              We are a leading Qatari based company established in 2018. Our
+              main goal is focusing on various activities mainly in national and
+              international trading of foodstuff products, cleaning products,
+              hygienic products, by undertaking numerous projects that have been
+              executed with precision exceptional quality on time.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-8">
             <img
-              src="images/logo-nav.png"
-              class="mr-3 h-12"
-              alt="Flowbite Logo"
+              class="border-2 border-primary shadow-xl w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+              alt="office content 1"
             />
-          </a>
-          <button
-            data-collapse-toggle="mega-menu-full"
-            type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray"
-            aria-controls="mega-menu-full"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-          <div
-            id="mega-menu-full"
-            class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
-          >
-            <ul
-              class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white"
-            >
-              <li>
-                <a
-                  href="/"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
-                  aria-current="page"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <button
-                  id="mega-menu-full-dropdown-button"
-                  data-collapse-toggle="mega-menu-full-dropdown"
-                  class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
-                >
-                  Prandes
-                  <svg
-                    class="ml-1 w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
-                  >Gallery</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
-                  >About-us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 -transparent"
-                  >Contact</a
-                >
-              </li>
-            </ul>
+            <img
+              class="border-2 border-primary shadow-xl mt-4 w-full lg:mt-10 rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+              alt="office content 2"
+            />
           </div>
         </div>
       </div>
-      <div
-        id="mega-menu-full-dropdown"
-        class="mt-1 border-gray-200 shadow-sm border-y bg-gray"
-      >
-        <div
-          class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 sm:grid-cols-2 md:px-6"
-        >
-          <ul>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
-                <div class="font-semibold">Rizpaille</div>
-                <span class="text-sm font-light text-gray-500">
-                  Rizpaille is the ideal new straw for all, preserving the
-                  environment, public health and total wildlife, straws are 100%
-                  biodegradable, compostable with natural colors.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
-                <div class="font-semibold">Pectiv</div>
-                <span class="text-sm font-light text-gray-500">
-                  PECTIV sanitary pads, the leading brand in the field, has the
-                  main goal of offering you a balance between your work and
-                  personal life so you don’t face any obstacles in the way of
-                  achieving your dreams and give you the best protection ever.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
-                <div class="font-semibold">Bazooka</div>
-                <span class="text-sm font-light text-gray-500">
-                  A German beverage company distributed in all Qatar for
-                  non-alcoholic drinks of any kind including Halal certified
-                  drinks.
-                </span>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
-                <div class="font-semibold">Vivacola</div>
-                <span class="text-sm font-light text-gray-500">
-                  In 1938 Vivi Kola was brought onto the market by Mineralquelle
-                  Eglisau. Our drinks are bottled with less sugar and the best
-                  ingredients.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
-                <div class="font-semibold">IPro</div>
-                <span class="text-sm font-light text-gray-500">
-                  IPRO is the leading supplier of Healthy Hydration drinks to
-                  the world of sports, health, and wellbeing. From professional
-                  athletes to leisure and education.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block p-3 rounded-lg hover:bg-gray-200 bg-white m-2"
-              >
-                <div class="font-semibold">Delice</div>
-                <span class="text-sm font-light text-gray-500">
-                  Délice is a citizen brand that is very close to its consumers
-                  and cares about their health.
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- END navbar -->
-
-    <!-- START HEADER -->
-    <section class="bg-white dark:bg-gray-900">
-      <div class="container grid place-content-center h-screen min-h-fit">
-        <div
-        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
-      >
-        <div class="font-light text-gray-500 sm:text-lg">
-          <h2
-            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
-          >
-            We didn't reinvent the wheel
-          </h2>
-          <p class="mb-4">
-            We are strategists, designers and developers. Innovators and problem
-            solvers. Small enough to be simple and quick, but big enough to
-            deliver the scope you want at the pace you need. Small enough to be
-            simple and quick, but big enough to deliver the scope you want at
-            the pace you need.
-          </p>
-          <p>
-            We are strategists, designers and developers. Innovators and problem
-            solvers. Small enough to be simple and quick.
-          </p>
-        </div>
-        <div class="grid grid-cols-2 gap-4 mt-8">
-          <img
-            class="border-2 border-primary shadow-xl w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-            alt="office content 1"
-          />
-          <img
-            class="border-2 border-primary shadow-xl mt-4 w-full lg:mt-10 rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-            alt="office content 2"
-          />
-        </div>
-      </div>
-      </div>
     </section>
     <!-- END HEADER -->
+
+    <!-- START ABOUT SECTION -->
+    <section class="about py-10 bg-gray">
+      <div class="container">
+        <div class="content flex items-center flex-col md:flex-row gap-4">
+          <div class="w-full md:w-1/2">
+            <h3 class="mb-4 text-3xl font-extrabold">About us</h3>
+            <p class="">
+              We are a leading Qatari based company established in 2018. Our
+              main goal is focusing on various activities mainly in national and
+              international trading of foodstuff products, cleaning products,
+              hygienic products, by undertaking numerous projects that have been
+              executed with precision exceptional quality on time. We have an
+              innovative approach which adapts and grows to meet the needs of
+              our clients through qualified and professionally trained sales and
+              marketing team for business development, who have extensive
+              knowledge and experience of local opportunities in Qatar. <br />
+              We started our activities in 2018 as a proprietorship shared by
+              the founders: <br />
+              1- MOHAMED ALI GHOUILI <br />
+              2- NASER ABDUL RAHMAN
+            </p>
+          </div>
+          <div class="img-container w-full md:w-1/2">
+            <img
+              src="images/about.jfif"
+              alt="about"
+              class="rounded-lg shadow-md border-2 border-primary w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT SECTION -->
+
+    <!-- START vmg SECTION -->
+    <section class="py-10">
+      <div class="container">
+        <div class="content flex flex-col md:flex-row gap-4">
+          <div class="text-white w-full rounded-xl shadow-md my-2 bg-primary p-4 md:w-1/2">
+            <h3 class="mb-4 text-3xl font-extrabold">Our Vision</h3>
+            <p class="">
+              To be one of the leading companies in GCC. In line with Qatar’s
+              national vision, we are changing the world of commerce through
+              investment and innovation to leave an outstanding legacy for
+              future generations.
+            </p>
+          </div>
+          <div class="text-white w-full rounded-xl shadow-md my-2 bg-primary p-4 md:w-1/2">
+            <h3 class="mb-4 text-3xl font-extrabold">Our Mission</h3>
+            <p class="">
+              We always deliver beyond expectations. We use our resources and
+              expertise so that our assets thrive and reach their full
+              potential.
+            </p>
+          </div>
+        </div>
+        <div class="text-white w-full rounded-xl shadow-md my-2 bg-primary p-4">
+          <h3 class="mb-4 text-3xl font-extrabold">Our Goals</h3>
+          <p class="">
+            Our goal is to bring prosperity to all our stakeholders in a corporately responsible manner. In addition,
+            import our consumer products and confirm their supply and distribution at the right price in conference
+            with the current trade policy of the Government.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END vmg SECTION -->
+
+    <!-- END CONTACT SECTION -->
+    <section class="bg-white">
+      <div class="container">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+          <img class="w-full" src="images/contact.svg" alt="dashboard image">
+          <div class="mt-4 md:mt-0">
+              <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">Let's create more tools and ideas that brings us together.</h2>
+              <p class="mb-6 font-light text-gray-500 md:text-lg">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+              <a href="contact.html" class="inline-flex items-center text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                  Contact Us
+                  <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </a>
+          </div>
+      </div>
+      </div>
+  </section>
+    <!-- END CONTACT SECTION -->
 
     <!-- START footer -->
     <footer class="p-4 bg-gray sm:p-6">
@@ -370,7 +421,9 @@
     <!-- END footer -->
 
     <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>
