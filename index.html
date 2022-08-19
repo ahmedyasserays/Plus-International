@@ -83,7 +83,7 @@
   <!-- END LOADING -->
 
   <!-- start navbar -->
-  <nav class="bg-white z-40 border-gray-200 fixed w-screen border-b-2">
+  <nav class="bg-white z-40 fixed w-screen shadow border-b border-gray-100">
     <div class="container">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="index.html" class="flex items-center">
@@ -135,57 +135,39 @@
         </div>
       </div>
     </div>
-    <div id="mega-menu-full-dropdown" class="mt-1 border-gray-200 shadow-sm border-y bg-gray">
-      <div class="mx-auto max-w-screen-xl text-gray-900 md:px-6">
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper py-5 px-4">
-            <div class="swiper-slide aspect-square rounded-xl p-2">
-              <a href="brands.html/#rizpaille"
-                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
-                <img src="images/brands.png" alt="brand name" class="w-1/2">
-                <div class="font-semibold">Rizpaille</div>
-              </a>
-            </div>
-            <div class="swiper-slide aspect-square rounded-xl p-2">
-              <a href="brands.html/#pectiv"
-                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
-                <img src="images/brands.png" alt="brand name" class="w-1/2">
-                <div class="font-semibold">Pectiv</div>
-              </a>
-            </div>
-            <div class="swiper-slide aspect-square rounded-xl p-2">
-              <a href="brands.html/#bazooka"
-                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
-                <img src="images/brands.png" alt="brand name" class="w-1/2">
-                <div class="font-semibold">Bazooka</div>
-              </a>
-            </div>
-            <div class="swiper-slide aspect-square rounded-xl p-2">
-              <a href="brands.html/#vivacola"
-                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
-                <img src="images/brands.png" alt="brand name" class="w-1/2">
-                <div class="font-semibold">Vivacola</div>
-              </a>
-            </div>
-            <div class="swiper-slide aspect-square rounded-xl p-2">
-              <a href="brands.html/#ipro"
-                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
-                <img src="images/brands.png" alt="brand name" class="w-1/2">
-                <div class="font-semibold">IPro</div>
-              </a>
-            </div>
-            <div class="swiper-slide aspect-square rounded-xl p-2">
-              <a href="brands.html/#delice"
-                class="flex flex-col justify-between items-center p-2 rounded-lg hover:bg-gray-200 w-full h-full bg-white">
-                <img src="images/brands.png" alt="brand name" class="w-1/2">
-                <div class="font-semibold">Delice</div>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-button-next text-primary"></div>
-          <div class="swiper-button-prev text-primary"></div>
-          <div class="swiper-pagination"></div>
+    <div class="container">
+    <div id="mega-menu-full-dropdown" class="mt-1 bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2">
+        <div class="mx-auto text-gray-900 md:p-6 flex gap-4">
+          <a href="brands.html#rizpaille"
+            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+            <img src="images/rizpaille.png" alt="brand name" class="w-full">
+            <div class="font-semibold">Rizpaille</div>
+          </a>
+          <a href="brands.html#pectiv"
+            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+            <img src="images/pecitv.svg" alt="brand name" class="w-full">
+            <div class="font-semibold">Pectiv</div>
+          </a>
+          <a href="brands.html#bazooka"
+            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+            <img src="images/bazooka.png" alt="brand name" class="w-full">
+            <div class="font-semibold">Bazooka</div>
+          </a>
+          <a href="brands.html#vivacola"
+            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+            <img src="images/vivikola.png" alt="brand name" class="w-full">
+            <div class="font-semibold">Vivacola</div>
+          </a>
+          <a href="brands.html#ipro"
+            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+            <img src="images/ipro.svg" alt="brand name" class="w-full">
+            <div class="font-semibold">IPro</div>
+          </a>
+          <a href="brands.html#delice"
+            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+            <img src="images/delice.webp" alt="brand name" class="w-full">
+            <div class="font-semibold">Delice</div>
+          </a>
         </div>
       </div>
     </div>
@@ -229,7 +211,8 @@
       <div class="content flex items-center flex-col md:flex-row gap-4">
         <div class="w-full md:w-1/2">
           <h3 class="mb-4 text-3xl font-extrabold">About us</h3>
-          <p class="font-light text-gray-700 lg:mb-16 sm:text-xl">We are a leading Qatari based company established in 2018. Our main goal is focusing on various
+          <p class="font-light text-gray-700 lg:mb-16 sm:text-xl">We are a leading Qatari based company established in
+            2018. Our main goal is focusing on various
             activities mainly in national and international trading of foodstuff products, cleaning products, hygienic
             products, by undertaking numerous projects that have been executed with precision exceptional quality
             on time. We have an innovative approach which adapts and grows to meet the needs of our clients
