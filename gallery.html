@@ -82,7 +82,7 @@
   </div>
   <!-- END LOADING -->
 
-  <!-- start navbar -->
+  <!-- STAR5 NAVBAR -->
   <nav class="bg-white z-40 fixed w-screen shadow border-b border-gray-100">
     <div class="container">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
@@ -108,7 +108,7 @@
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
                 aria-current="page">Home</a>
             </li>
-            <li>
+            <li class="hidden md:block">
               <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
                 class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
                 Brandes
@@ -118,6 +118,11 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </button>
+            </li>
+            <li class="block md:hidden">
+              <a href="brands.html"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                aria-current="page">Brandes</a>
             </li>
             <li>
               <a href="gallery.html"
@@ -135,40 +140,50 @@
         </div>
       </div>
     </div>
-    <div class="container">
-    <div id="mega-menu-full-dropdown" class="mt-1 bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2">
-        <div class="mx-auto text-gray-900 md:p-6 flex gap-4">
-          <a href="brands.html#rizpaille"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/rizpaille.png" alt="brand name" class="w-full">
-            <div class="font-semibold">Rizpaille</div>
-          </a>
-          <a href="brands.html#pectiv"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/pecitv.svg" alt="brand name" class="w-full">
-            <div class="font-semibold">Pectiv</div>
-          </a>
-          <a href="brands.html#bazooka"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/bazooka.png" alt="brand name" class="w-full">
-            <div class="font-semibold">Bazooka</div>
-          </a>
-          <a href="brands.html#vivacola"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/vivikola.png" alt="brand name" class="w-full">
-            <div class="font-semibold">Vivacola</div>
-          </a>
-          <a href="brands.html#ipro"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/ipro.svg" alt="brand name" class="w-full">
-            <div class="font-semibold">IPro</div>
-          </a>
-          <a href="brands.html#delice"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/delice.webp" alt="brand name" class="w-full">
-            <div class="font-semibold">Delice</div>
-          </a>
-        </div>
+    <div id="mega-menu-full-dropdown" class="bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2">
+      <div class="mx-auto text-gray-900 md:p-6 flex gap-4">
+        <a href="brands.html#rizpaille"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Rizpaille</div>
+        </a>
+        <a href="brands.html#pectiv"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Pectiv</div>
+        </a>
+        <a href="brands.html#bazooka"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/bazooka.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Bazooka</div>
+        </a>
+        <a href="brands.html#vivacola"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/vivikola.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Vivacola</div>
+        </a>
+        <a href="brands.html#pro"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/ipro.svg" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">IPro</div>
+        </a>
+        <a href="brands.html#delice"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/delice.webp" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Delice</div>
+        </a>
       </div>
     </div>
   </nav>
@@ -181,9 +196,9 @@
         class="gap-8 items-center pb-8 pt-16 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 lg:px-6">
         <div class="mt-4 md:mt-0">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">Gallery</h2>
-          <p class="mb-6 font-light text-gray-500 md:text-lg">Flowbite helps you connect with friends and communities of
-            people who share your interests. Connecting with your friends and family as well as discovering new ones is
-            easy with features like Groups.</p>
+          <p class="mb-6 font-light text-gray-500 md:text-lg">
+            Presented below are just some of the latest visual content of our products, events and services to give you a better visual of Plus Trading.
+          </p>
           <a href="contact.html"
             class="inline-flex items-center text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
             Contact Us
@@ -194,7 +209,7 @@
             </svg>
           </a>
         </div>
-        <img class="w-full drop-shadow-lg" src="images/gallery.svg" alt="dashboard image">
+        <img class="w-full drop-shadow-lg" src="images/gallery.png" alt="dashboard image">
       </div>
     </div>
   </section>
@@ -240,11 +255,17 @@
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
               <ul class="text-gray-600">
-                <li class="mb-4">
-                  <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                <li>
+                  <a href="brands.html" class="hover:underline">Our Brands</a>
                 </li>
                 <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                  <a href="gallery.html" class="hover:underline">Our Gallery</a>
+                </li>
+                <li>
+                  <a href="about.html" class="hover:underline">About us</a>
+                </li>
+                <li>
+                  <a href="contact.html" class="hover:underline">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -252,10 +273,10 @@
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Follow us</h2>
               <ul class="text-gray-600">
                 <li class="mb-4">
-                  <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                  <a href="https://facebook.com" class="hover:underline ">Facebook</a>
                 </li>
                 <li>
-                  <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                  <a href="https://twitter.com" class="hover:underline">Twitter</a>
                 </li>
               </ul>
             </div>
@@ -263,10 +284,10 @@
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Legal</h2>
               <ul class="text-gray-600">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">Privacy Policy</a>
+                  <a href="#" class="cursor-auto text-gray-300">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                  <a href="#" class="cursor-auto text-gray-300">Terms &amp; Conditions</a>
                 </li>
               </ul>
             </div>

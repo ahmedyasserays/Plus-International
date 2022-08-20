@@ -82,7 +82,7 @@
   </div>
   <!-- END LOADING -->
 
-  <!-- start navbar -->
+  <!-- STAR5 NAVBAR -->
   <nav class="bg-white z-40 fixed w-screen shadow border-b border-gray-100">
     <div class="container">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
@@ -108,7 +108,7 @@
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
                 aria-current="page">Home</a>
             </li>
-            <li>
+            <li class="hidden md:block">
               <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
                 class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
                 Brandes
@@ -118,6 +118,11 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </button>
+            </li>
+            <li class="block md:hidden">
+              <a href="brands.html"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                aria-current="page">Brandes</a>
             </li>
             <li>
               <a href="gallery.html"
@@ -135,40 +140,50 @@
         </div>
       </div>
     </div>
-    <div class="container">
-    <div id="mega-menu-full-dropdown" class="mt-1 bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2">
-        <div class="mx-auto text-gray-900 md:p-6 flex gap-4">
-          <a href="brands.html#rizpaille"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/rizpaille.png" alt="brand name" class="w-full">
-            <div class="font-semibold">Rizpaille</div>
-          </a>
-          <a href="brands.html#pectiv"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/pecitv.svg" alt="brand name" class="w-full">
-            <div class="font-semibold">Pectiv</div>
-          </a>
-          <a href="brands.html#bazooka"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/bazooka.png" alt="brand name" class="w-full">
-            <div class="font-semibold">Bazooka</div>
-          </a>
-          <a href="brands.html#vivacola"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/vivikola.png" alt="brand name" class="w-full">
-            <div class="font-semibold">Vivacola</div>
-          </a>
-          <a href="brands.html#ipro"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/ipro.svg" alt="brand name" class="w-full">
-            <div class="font-semibold">IPro</div>
-          </a>
-          <a href="brands.html#delice"
-            class="flex flex-col justify-between items-center shadow-sm aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-            <img src="images/delice.webp" alt="brand name" class="w-full">
-            <div class="font-semibold">Delice</div>
-          </a>
-        </div>
+    <div id="mega-menu-full-dropdown" class="bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2">
+      <div class="mx-auto text-gray-900 md:p-6 flex gap-4">
+        <a href="brands.html#rizpaille"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Rizpaille</div>
+        </a>
+        <a href="brands.html#pectiv"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Pectiv</div>
+        </a>
+        <a href="brands.html#bazooka"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/bazooka.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Bazooka</div>
+        </a>
+        <a href="brands.html#vivacola"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/vivikola.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Vivacola</div>
+        </a>
+        <a href="brands.html#ipro"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/ipro.svg" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">IPro</div>
+        </a>
+        <a href="brands.html#delice"
+          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
+          <div class="aspect-square w-[50px] grid place-content-center">
+            <img src="images/delice.webp" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Delice</div>
+        </a>
       </div>
     </div>
   </nav>
@@ -176,16 +191,14 @@
 
   <!-- START HEADER -->
   <div class="container">
-    <section class="bg-white h-screen grid place-content-center">
+    <section class="bg-white h-screen grid place-content-center overflow-hidden">
       <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 md:grid-cols-12">
         <div class="mr-auto place-self-center bg md:col-span-7" data-aos="zoom-in">
           <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
             Superior Rehydration For Optimum Recovery
           </h1>
           <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-            To be one of the leading companies in GCC. In line with Qatar’s national vision, we are changing the
-            world of commerce through investment and innovation to leave an outstanding legacy for future
-            generations.
+            Global hydration experts distributing in over 20 countries supplying a product range naturally sweetened with stevia, containing no artificial chemicals and rich in Vitamin C.
           </p>
           <a href="#"
             class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-primary focus:ring-4 focus:ring-primary">
@@ -198,7 +211,7 @@
           </a>
         </div>
         <div class="hidden lg:mt-0 md:col-span-5 md:flex">
-          <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup" />
+          <img src="images/logo.png" class="drop-shadow-lg" alt="mockup" />
         </div>
       </div>
     </section>
@@ -206,10 +219,10 @@
   <!-- END HEADER -->
 
   <!-- START ABOUT SECTION -->
-  <section class="about py-10 bg-gray">
+  <section class="about py-10 bg-gray overflow-hidden">
     <div class="container">
       <div class="content flex items-center flex-col md:flex-row gap-4">
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2" data-aos="fade-right">
           <h3 class="mb-4 text-3xl font-extrabold">About us</h3>
           <p class="font-light text-gray-700 lg:mb-16 sm:text-xl">We are a leading Qatari based company established in
             2018. Our main goal is focusing on various
@@ -223,7 +236,7 @@
             class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:opacity-80 mt-4 focus:ring-4 focus:ring-primary">Get
             to know us more</a>
         </div>
-        <div class="img-container w-full md:w-1/2">
+        <div class="img-container w-full md:w-1/2" data-aos="fade-left">
           <img src="images/about.jfif" alt="about" class="rounded-lg shadow-md border-2 border-primary w-full">
         </div>
       </div>
@@ -231,79 +244,62 @@
   </section>
   <!-- END ABOUT SECTION -->
 
-  <!-- START HEALTH BENEFITS -->
-  <section class="py-10">
+  <!-- START BRANDES -->
+  <section class="py-10 text-center overflow-hidden">
     <div class="container">
-      <h3 class="mb-4 text-3xl font-extrabold">Health Benefits</h3>
-      <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8">
-      <div class="benefits grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/free.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Free From Caffeine & Stimulants
+      <h3 class="mb-4 text-3xl font-extrabold">Brandes</h3>
+      <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl mx-auto max-w-screen-sm">
+        Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Excepturi ut tempore, quia nesciunt, odio iste ullam saepe dignissimos beatae
+        obcaecati.
+      </p>
+      <!-- <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8"> -->
+      <div class="benefits grid grid-cols-2 md:grid-cols-6 gap-4">
+        <a href="brands.html#rizpaille"
+          class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md" data-aos="fade-up" data-aos-duration="100" >
+          <img src="images/rizpaille.png" alt="free" class="m-auto drop-shadow-md">
+          <p class="text-white text-2xl font-semibold">
+            Rizpaille
           </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/added.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Added Electrolytes & Minerals
+        </a>
+        <a href="brands.html#pectiv" class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md" data-aos="fade-up" data-aos-duration="200" >
+          <img src="images/pecitv.svg" alt="free" class="m-auto drop-shadow-md">
+          <p class="text-white text-2xl font-semibold">
+            Pectiv
           </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/free2.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Free From Caffeine & Stimulants
+        </a>
+        <a href="brands.html#bazooka" class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md" data-aos="fade-up" data-aos-duration="300" >
+          <img src="images/bazooka.png" alt="free" class="m-auto drop-shadow-md">
+          <p class="text-white text-2xl font-semibold">
+            Bazooka
           </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/can.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Can Improve Focus & Concentration
+        </a>
+        <a href="brands.html#vivikola"
+          class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md" data-aos="fade-up" data-aos-duration="400" >
+          <img src="images/vivikola.png" alt="free" class="m-auto drop-shadow-md">
+          <p class="text-white text-2xl font-semibold">
+            Vivacola
           </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/fast.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Fast, Effective Hydration
+        </a>
+        <a href="brands.html#ipro" class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md" data-aos="fade-up" data-aos-duration="500" >
+          <img src="images/ipro.svg" alt="free" class="m-auto drop-shadow-md">
+          <p class="text-white text-2xl font-semibold">
+            IPro
           </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/sugar.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Sugar Tax Exempt
+        </a>
+        <a href="brands.html#delice" class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md" data-aos="fade-up" data-aos-duration="600" >
+          <img src="images/delice.webp" alt="free" class="m-auto drop-shadow-md">
+          <p class="text-white text-2xl font-semibold">
+            Delice
           </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/halal.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Halal Certified & Approved
-          </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/added2.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Added B Vitamins
-          </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/less.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Less Than 3g Sugar per 100ml
-          </p>
-        </div>
-        <div class="bg-primary text-center block p-4 rounded-lg border border-gray-200 shadow">
-          <img src="images/sugar.png" alt="free" class="m-auto">
-          <p class="font-normal text-white">
-            Sugar Tax Exempt
-          </p>
-        </div>
+        </a>
       </div>
     </div>
   </section>
-  <!-- END HEALTH BENEFITS -->
+  <!-- END BRANDES -->
 
   <!-- START TESTEMONIAL -->
-  <section class="bg-gray">
+  <section class="bg-gray overflow-hidden">
     <div class="container">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm">
@@ -402,12 +398,12 @@
   <!-- END TESTEMONIAL -->
 
   <!-- START BRANDES -->
-  <section class="bg-white">
+  <section class="bg-white overflow-hidden">
     <div class="container">
       <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
         <h2 class="mb-6 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 md:text-4xl">
           You’ll be in good company</h2>
-        <p class="text-center mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl">Lorem ipsum dolor, sit amet consectetur
+        <p class="text-center mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl  max-w-screen-sm mx-auto">Lorem ipsum dolor, sit amet consectetur
           adipisicing elit. Saepe, cumque nisi corporis vitae consequuntur earum magnam ipsam laboriosam modi
           consectetur!</p>
         <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6">
@@ -561,11 +557,17 @@
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
               <ul class="text-gray-600">
-                <li class="mb-4">
-                  <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                <li>
+                  <a href="brands.html" class="hover:underline">Our Brands</a>
                 </li>
                 <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                  <a href="gallery.html" class="hover:underline">Our Gallery</a>
+                </li>
+                <li>
+                  <a href="about.html" class="hover:underline">About us</a>
+                </li>
+                <li>
+                  <a href="contact.html" class="hover:underline">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -573,10 +575,10 @@
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Follow us</h2>
               <ul class="text-gray-600">
                 <li class="mb-4">
-                  <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                  <a href="https://facebook.com" class="hover:underline ">Facebook</a>
                 </li>
                 <li>
-                  <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                  <a href="https://twitter.com" class="hover:underline">Twitter</a>
                 </li>
               </ul>
             </div>
@@ -584,10 +586,10 @@
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Legal</h2>
               <ul class="text-gray-600">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">Privacy Policy</a>
+                  <a href="#" class="cursor-auto text-gray-300">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                  <a href="#" class="cursor-auto text-gray-300">Terms &amp; Conditions</a>
                 </li>
               </ul>
             </div>

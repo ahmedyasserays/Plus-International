@@ -1,10 +1,25 @@
-let loading = document.querySelector(".loading")
-window.onload = () => {
-  loading.classList.add("hidden")
-}
 let mmdb = document.getElementById("mega-menu-full-dropdown-button")
 let mmfd = document.getElementById("mega-menu-full-dropdown")
 let navLinks = document.querySelectorAll("#mega-menu-full > ul > li > a")
+let loading = document.querySelector(".loading")
+
+AOS.init();
+
+window.onload = () => {
+  loading.classList.add("hidden")
+}
+
+navLinks.forEach(link => {
+  if (link.pathname.slice(0, 5) == window.location.pathname.slice(0, 5)) {
+    console.log("fuck");
+    link.classList.add("text-primary")
+  }
+  if (window.location.pathname == "/index.html") {
+    for (let i = 0; i < navLinks.length; i++) {
+      navLinks[0].classList.add("text-primary")
+    }
+  }
+})
 
 const hidden_drop_menu_list = () => {
   mmfd.classList.add("hidden")
@@ -28,19 +43,3 @@ navLinks.forEach(link => {
     hidden_drop_menu_list();
   }
 })
-
-AOS.init();
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
