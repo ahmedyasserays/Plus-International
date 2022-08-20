@@ -11,7 +11,6 @@ window.onload = () => {
 
 navLinks.forEach(link => {
   if (link.pathname.slice(0, 5) == window.location.pathname.slice(0, 5)) {
-    console.log("fuck");
     link.classList.add("text-primary")
   }
   if (window.location.pathname == "/index.html") {
