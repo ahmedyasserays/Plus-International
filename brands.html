@@ -35,37 +35,24 @@
         scroll-behavior: auto;
       }
     }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
+    .brand{
+      background-position: center;
+      background-size: cover;
     }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
+    #bazooka{
+      background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), #cfa138), url("images/bazooka-bg.jpg");
     }
-
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
+    #pectiv{
+      background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), #cfa138), url("images/pectiv-bg.png");
     }
-
-    .swiper-pagination span {
-      background-color: #cfa138;
+    #vivacola{
+      background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), #cfa138), url("images/vivikola-bg.jpg");
+    }
+    #delice{
+      background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), #cfa138), url("images/delice-bg.jpg");
+    }
+    #rizpaille{
+      background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), #cfa138), url("images/rizpaille-bg.jpg");
     }
   </style>
   <script>
@@ -169,46 +156,46 @@
       </div>
     </div>
     <div id="mega-menu-full-dropdown"
-      class="bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2">
-      <div class="mx-auto text-gray-900 md:p-6 flex gap-4">
+      class="bg-gray rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2 w-[70vw]">
+      <div class="mx-auto text-gray-900 md:p-6 grid grid-cols-5 gap-4 w-full">
         <a href="brands.html#rizpaille"
-          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-          <div class="aspect-square w-[50px] grid place-content-center">
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-white grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
           </div>
           <div class="font-semibold">Rizpaille</div>
         </a>
         <a href="brands.html#pectiv"
-          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-          <div class="aspect-square w-[50px] grid place-content-center">
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-white grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
           </div>
           <div class="font-semibold">Pectiv</div>
         </a>
         <a href="brands.html#bazooka"
-          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-          <div class="aspect-square w-[50px] grid place-content-center">
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-white grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/bazooka.png" alt="brand name" class="w-full drop-shadow-md">
           </div>
           <div class="font-semibold">Bazooka</div>
         </a>
         <a href="brands.html#vivacola"
-          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-          <div class="aspect-square w-[50px] grid place-content-center">
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-white grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/vivikola.png" alt="brand name" class="w-full drop-shadow-md">
           </div>
           <div class="font-semibold">Vivacola</div>
         </a>
-        <a href="brands.html#pro"
-          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-          <div class="aspect-square w-[50px] grid place-content-center">
+        <!-- <a href="brands.html#ipro"
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-white grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/ipro.svg" alt="brand name" class="w-full drop-shadow-md">
           </div>
           <div class="font-semibold">IPro</div>
-        </a>
+        </a> -->
         <a href="brands.html#delice"
-          class="flex flex-col justify-between items-center shadow-sm transition aspect-square p-4 rounded-lg hover:bg-gray-200 bg-white">
-          <div class="aspect-square w-[50px] grid place-content-center">
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-white grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/delice.webp" alt="brand name" class="w-full drop-shadow-md">
           </div>
           <div class="font-semibold">Delice</div>
@@ -219,7 +206,7 @@
   <!-- END navbar -->
 
   <!-- END header -->
-  <section id="ipro" class="pb-6 overflow-hidden bg-gradient-to-b relative from-primary to-gray-300 bg-opacity-50">
+  <section class="pb-6 overflow-hidden bg-gradient-to-b relative from-primary to-gray-300 bg-opacity-50">
     <img src="images/logo-nav.png" alt="logo"
       class="absolute top-1/2 left-0 -translate-x-1/3 -translate-y-1/2 h-[120%] opacity-50 hidden md:block">
     <div class="container h-screen grid place-content-center" data-aos="zoom-in-up">
@@ -234,9 +221,9 @@
   <!-- END header -->
 
   <!-- start brand one -->
-  <section class="py-6 md:py-12 bg-gray" id="bazooka">
+  <section class="py-6 md:py-12 brand" id="bazooka">
     <div class="container flex items-center flex-col md:flex-row-reverse">
-      <div class="content w-full text-gray-400 md:w-1/2 md:border-l md:pl-4" data-aos="zoom-in-left">
+      <div class="content w-full md:w-1/2 md:border-l md:pl-4" data-aos="zoom-in-left">
         <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">Bazooka</h4>
         <p class="mb-8 font-light lg:mb-16 sm:text-xl">
           A German beverage company distributed in all Qatar for non-alcoholic drinks of any kind including Halal
@@ -250,9 +237,9 @@
   </section>
   <!-- END brand one -->
   <!-- start brand two -->
-  <section class="py-6 md:py-12" id="pectiv">
+  <section class="py-6 md:py-12 brand bg-gray" id="pectiv">
     <div class="container flex items-center flex-col md:flex-row">
-      <div class="content w-full text-gray-400 md:w-1/2 md:border-r md:pr-4" data-aos="zoom-in-right">
+      <div class="content w-full md:w-1/2 md:border-r md:pr-4" data-aos="zoom-in-right">
         <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">Pectiv</h4>
         <p class="font-light sm:text-xl mb-4">
           PECTIV sanitary pads, the leading brand in the field, has the main goal of offering you a balance between
@@ -269,9 +256,9 @@
   </section>
   <!-- END brand two -->
   <!-- start brand three -->
-  <section class="py-6 md:py-12 bg-gray" id="vivacola">
+  <section class="py-6 md:py-12 brand" id="vivacola">
     <div class="container flex items-center flex-col md:flex-row-reverse">
-      <div class="content w-full text-gray-400 md:w-1/2 md:border-l md:pl-4" data-aos="zoom-in-left">
+      <div class="content w-full md:w-1/2 md:border-l md:pl-4" data-aos="zoom-in-left">
         <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">Vivacola</h4>
         <p class="font-light lg:mb-16 sm:text-xl mb-2">
           In 1938 Vivi Kola was brought onto the market by Mineralquelle Eglisau. Our drinks are bottled with less
@@ -285,11 +272,11 @@
   </section>
   <!-- END brand three -->
   <!-- start brand four -->
-  <section class="py-6 md:py-12" id="pro">
+  <!-- <section class="py-6 md:py-12 brand" id="pro">
     <div class="container flex items-center flex-col md:flex-row">
-      <div class="content w-full text-gray-400 md:w-1/2 md:border-r md:pr-4" data-aos="zoom-in-right">
+      <div class="content w-full md:w-1/2 md:border-r md:pr-4" data-aos="zoom-in-right">
         <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">IPro</h4>
-        <p class="font-light text-gray-400 lg:mb-16 sm:text-xl mb-2">
+        <p class="font-light lg:mb-16 sm:text-xl mb-2">
           IPRO is the leading supplier of Healthy Hydration drinks to the world of sports, health, and wellbeing.
           From professional athletes to leisure and education, iPRO is the name in healthy hydration, not only in
           the United Kingdom but across the globe in Cyprus, Australia, the Middle East, and many more countries
@@ -299,18 +286,18 @@
       <img src="images/ipro.svg" class="w-full md:w-[40%] mx-auto drop-shadow-md" alt="brand name"
         data-aos="zoom-in-left">
     </div>
-  </section>
+  </section> -->
   <!-- END brand four -->
   <!-- start brand five -->
-  <section class="py-6 md:py-12 bg-gray" id="delice">
+  <section class="py-6 md:py-12 brand bg-gray" id="delice">
     <div class="container flex items-center flex-col md:flex-row-reverse">
-      <div class="content w-full text-gray-400 md:w-1/2 md:border-l md:pl-4" data-aos="zoom-in-left">
+      <div class="content w-full md:w-1/2 md:border-l md:pl-4" data-aos="zoom-in-left">
         <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">Delice</h4>
-        <p class="font-light text-gray-400 sm:text-xl mb-4">
+        <p class="font-light sm:text-xl mb-4">
           Délice is a citizen brand that is very close to its consumers and cares about their health. The Group had
           already managed to have the confidence of market actors!
         </p>
-        <p class="font-light text-gray-400 lg:mb-16 sm:text-xl mb-2">
+        <p class="font-light lg:mb-16 sm:text-xl mb-2">
           Délice now uses all its Know-How and expertise to serve consumers in order to provide them with
           quality products that enable them to have a healthy lifestyle. With carefully selected and collected milk
           from our local farmers, quality control to international standards, to serve you the best dairy products!
@@ -321,11 +308,11 @@
   </section>
   <!-- END brand five -->
   <!-- start brand six -->
-  <section class="py-6 md:py-12" id="rizpaille">
+  <section class="py-6 md:py-12 brand" id="rizpaille">
     <div class="container flex items-center flex-col md:flex-row">
-      <div class="content w-full text-gray-400 md:w-1/2 md:border-r md:pr-4" data-aos="zoom-in-right">
+      <div class="content w-full md:w-1/2 md:border-r md:pr-4" data-aos="zoom-in-right">
         <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">Rizpaille</h4>
-        <p class="font-light text-gray-400 lg:mb-16 sm:text-xl mb-2">
+        <p class="font-light lg:mb-16 sm:text-xl mb-2">
           Rizpaille is the ideal new straw for all, preserving the environment, public health and total wildlife,
           straws are 100% biodegradable, compostable with natural colors. Our straws totally respect the nature,
           they are very different from non-plastic models. Rizpaille was inspired by the leaves around spring rolls
@@ -435,4 +422,3 @@
 </body>
 
 </html>
-<!-- END navbar -->

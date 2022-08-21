@@ -31,6 +31,10 @@ const visiable_drop_menu_list = () => {
 
 hidden_drop_menu_list()
 
+mmdb.onclick = ()=>{
+  window.location.href = "/brands.html"
+}
+
 mmdb.onmouseover = ()=>{
   visiable_drop_menu_list();
 }
