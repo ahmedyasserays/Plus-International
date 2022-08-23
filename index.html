@@ -31,16 +31,20 @@
   <style>
     @media (min-width: 996px) {
       .benefits{
-        animation: marquee 11s linear infinite;
+        animation: marquee 12s linear infinite;
       }
     }
     @keyframes marquee {
       0%{
-        transform: translateX(-100%)
-      }
-      100%{
         transform: translateX(100%);
       }
+      100%{
+        transform: translateX(-100%)
+      }
+    }
+    .header{
+      background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/bgbg.jpg");
+      background-size: cover;
     }
   </style>
   <script>
@@ -113,7 +117,7 @@
             <li class="hidden md:block">
               <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
                 class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
-                Brandes
+                Brands
                 <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -145,20 +149,6 @@
     <div id="mega-menu-full-dropdown"
       class="bg-primary rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2 w-[70vw] max-w-[800px]">
       <div class="mx-auto text-gray-900 md:p-6 grid grid-cols-5 gap-4 w-full">
-        <a href="brands.html#rizpaille"
-          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
-          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
-            <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
-          </div>
-          <div class="font-semibold">Rizpaille</div>
-        </a>
-        <a href="brands.html#pectiv"
-          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
-          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
-            <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
-          </div>
-          <div class="font-semibold">Pectiv</div>
-        </a>
         <a href="brands.html#bazooka"
           class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
           <div class="aspect-square grid place-content-center w-full max-w-[70px]">
@@ -166,13 +156,23 @@
           </div>
           <div class="font-semibold">Bazooka</div>
         </a>
+        
+        <a href="brands.html#pectiv"
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
+            <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Pectiv</div>
+        </a>
+        
         <a href="brands.html#vivacola"
           class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
           <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/vivikola.png" alt="brand name" class="w-full drop-shadow-md">
           </div>
-          <div class="font-semibold">Vivacola</div>
+          <div class="font-semibold">Vivikola</div>
         </a>
+
         <!-- <a href="brands.html#ipro"
           class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
           <div class="aspect-square grid place-content-center w-full max-w-[70px]">
@@ -187,21 +187,28 @@
           </div>
           <div class="font-semibold">Delice</div>
         </a>
+        <a href="brands.html#rizpaille"
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
+            <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Rizpaille</div>
+        </a>
       </div>
     </div>
   </nav>
   <!-- END NAVBAR -->
 
   <!-- START HEADER -->
+  <section class="bg-white h-screen header grid place-content-center overflow-hidden">
   <div class="container">
-    <section class="bg-white h-screen grid place-content-center overflow-hidden">
       <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 md:grid-cols-12">
         <div class="mr-auto place-self-center bg md:col-span-7" data-aos="zoom-in">
           <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
             <span class="text-primary">Superior</span> Rehydration For <span class="text-primary">Optimum</span>
             Recovery
           </h1>
-          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+          <p class="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
             Global hydration experts distributing in over 20 countries supplying a product range naturally sweetened
             with stevia, containing no artificial chemicals and rich in Vitamin C.
           </p>
@@ -219,17 +226,17 @@
           <img src="images/logo.png" class="drop-shadow-lg" alt="mockup" />
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
   <!-- END HEADER -->
 
   <!-- START ABOUT SECTION -->
-  <section class="about py-10 bg-gray overflow-hidden">
+  <section class="about py-10 bg-primary overflow-hidden">
     <div class="container">
-      <div class="content flex items-center flex-col md:flex-row gap-4">
+      <div class="content flex items-center flex-col md:flex-row gap-4 text-white">
         <div class="w-full md:w-1/2" data-aos="fade-right">
-          <h3 class="mb-4 text-3xl font-extrabold">About us</h3>
-          <p class="font-light text-gray-700 lg:mb-16 sm:text-xl">We are a leading Qatari based company established in
+          <h3 class="mb-6 text-4xl font-extrabold drop-shadow-lg">About us</h3>
+          <p class="font-light lg:mb-16 sm:text-xl">We are a leading Qatari based company established in
             2018. Our main goal is focusing on various
             activities mainly in national and international trading of foodstuff products, cleaning products, hygienic
             products, by undertaking numerous projects that have been executed with precision exceptional quality
@@ -238,7 +245,7 @@
             have extensive knowledge and experience of local opportunities in Qatar.
           </p>
           <a href="about.html"
-            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:opacity-80 mt-4 focus:ring-4 focus:ring-primary">Get
+            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-primary rounded-lg bg-white hover:opacity-80 mt-4 focus:ring-4 focus:ring-primary">Get
             to know us more</a>
         </div>
         <div class="img-container w-full md:w-1/2" data-aos="fade-left">
@@ -260,22 +267,6 @@
       <!-- <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8"> -->
       <!-- <marquee behavior="" direction="" scrolldelay="5"> -->
         <div class="benefits grid grid-cols-2 md:grid-cols-5 gap-4">
-          <a href="brands.html#rizpaille"
-            class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md"
-            data-aos="fade-up" data-aos-duration="100">
-            <img src="images/rizpaille.png" alt="free" class="m-auto drop-shadow-md">
-            <p class="text-white text-2xl font-semibold">
-              Rizpaille
-            </p>
-          </a>
-          <a href="brands.html#pectiv"
-            class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md"
-            data-aos="fade-up" data-aos-duration="200">
-            <img src="images/pecitv.svg" alt="free" class="m-auto drop-shadow-md invert">
-            <p class="text-white text-2xl font-semibold">
-              Pectiv
-            </p>
-          </a>
           <a href="brands.html#bazooka"
             class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md"
             data-aos="fade-up" data-aos-duration="300">
@@ -284,12 +275,22 @@
               Bazooka
             </p>
           </a>
+          
+          <a href="brands.html#pectiv"
+            class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md"
+            data-aos="fade-up" data-aos-duration="200">
+            <img src="images/pecitv.svg" alt="free" class="m-auto drop-shadow-md invert">
+            <p class="text-white text-2xl font-semibold">
+              Pectiv
+            </p>
+          </a>
+          
           <a href="brands.html#vivikola"
             class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md"
             data-aos="fade-up" data-aos-duration="400">
             <img src="images/vivikola.png" alt="free" class="m-auto drop-shadow-md">
             <p class="text-white text-2xl font-semibold">
-              Vivacola
+              Vivikola
             </p>
           </a>
           <!-- <a href="brands.html#ipro"
@@ -308,6 +309,14 @@
               Delice
             </p>
           </a>
+          <a href="brands.html#rizpaille"
+            class="bg-primary text-center p-4 rounded-lg border border-gray-200 shadow flex flex-col justify-between grayscale hover:grayscale-0 hover:scale-105 transition ease-in-out hover:shadow-md"
+            data-aos="fade-up" data-aos-duration="100">
+            <img src="images/rizpaille.png" alt="free" class="m-auto drop-shadow-md">
+            <p class="text-white text-2xl font-semibold">
+              Rizpaille
+            </p>
+          </a>
         </div>
       <!-- </marquee> -->
     </div>
@@ -315,99 +324,77 @@
   <!-- END BRANDES -->
 
   <!-- START TESTEMONIAL -->
-  <section class="bg-gray overflow-hidden">
+  <section class="bg-primary overflow-hidden">
     <div class="container">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-sm">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Testimonials</h2>
-          <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl">Explore the whole collection of open-source web
+        <div class="mx-auto max-w-screen-sm text-white">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold drop-shadow-md">Testimonials</h2>
+          <p class="mb-8 font-light lg:mb-16 sm:text-xl">Explore the whole collection of open-source web
             components and elements built with the utility classes from Tailwind</p>
         </div>
-        <div
-          class="grid mb-8 rounded-2xl shadow-lg overflow-hidden lg:mb-12 lg:grid-cols-2 border border-gray-200 text-white">
-          <figure
-            class="flex flex-col justify-center items-center p-8 text-center bg-primary border-b border-gray-200 md:p-12 lg:border-r ">
-            <blockquote class="mx-auto mb-8 max-w-2xl">
-              <h3 class="text-lg font-semibold">Speechless with how easy this was to integrate</h3>
-              <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this
-                was to integrate within my application. Most templates are a pain, code is scattered, and near
-                impossible to theme.</p>
-              <p class="my-4">Flowbite has code in one place and I'm not joking when I say it took me a matter of
-                minutes to copy the code, customise it and integrate within a Laravel + Vue application.</p>
-              <p class="my-4">If you care for your time, I hands down would go with this."</p>
-            </blockquote>
-            <figcaption class="flex justify-center items-center space-x-3">
-              <img class="w-9 h-9 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                alt="profile picture">
-              <div class="space-y-0.5 font-medium text-left">
-                <div>Bonnie Green</div>
-                <div class="text-sm font-light">Developer at Open AI</div>
-              </div>
-            </figcaption>
+        <div class="grid mb-8 lg:mb-12 lg:grid-cols-2 rounded-2xl shadow-lg overflow-hidden">
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500">
+                  <h3 class="text-lg font-semibold text-gray-900">Speechless with how easy this was to integrate</h3>
+                  <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme.</p>
+                  <p class="my-4">Flowbite has code in one place and I'm not joking when I say it took me a matter of minutes to copy the code, customise it and integrate within a Laravel + Vue application.</p>
+                  <p class="my-4">If you care for your time, I hands down would go with this."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium text-left">
+                      <div>Bonnie Green</div>
+                      <div class="text-sm font-light text-gray-500">Developer at Open AI</div>
+                  </div>
+              </figcaption>    
           </figure>
-          <figure
-            class="flex flex-col justify-center items-center p-8 text-center bg-primary border-b border-gray-200 md:p-12">
-            <blockquote class="mx-auto mb-8 max-w-2xl">
-              <h3 class="text-lg font-semibold">Solid foundation for any project</h3>
-              <p class="my-4">"FlowBite provides a robust set of design tokens and components based on the popular
-                Tailwind CSS framework. From the most used UI components like forms and navigation bars to the whole app
-                screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.
-              </p>
-              <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of
-                Tailwind CSS is a huge timesaver!"</p>
-            </blockquote>
-            <figcaption class="flex justify-center items-center space-x-3">
-              <img class="w-9 h-9 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
-                alt="profile picture">
-              <div class="space-y-0.5 font-medium text-left">
-                <div>Roberta Casas</div>
-                <div class="text-sm font-light">Lead designer at Dropbox</div>
-              </div>
-            </figcaption>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500">
+                  <h3 class="text-lg font-semibold text-gray-900">Solid foundation for any project</h3>
+                  <p class="my-4">"FlowBite provides a robust set of design tokens and components based on the popular Tailwind CSS framework. From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.</p>
+                  <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium text-left">
+                      <div>Roberta Casas</div>
+                      <div class="text-sm font-light text-gray-500">Lead designer at Dropbox</div>
+                  </div>
+              </figcaption>    
           </figure>
-          <figure
-            class="flex flex-col justify-center items-center p-8 text-center bg-primary border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r">
-            <blockquote class="mx-auto mb-8 max-w-2xl ">
-              <h3 class="text-lg font-semibold">Mindblowing workflow and variants</h3>
-              <p class="my-4">"As someone who mainly designs in the browser, I've been a casual user of Figma, but as
-                soon as I saw and started playing with FlowBite my mind was 🤯.</p>
-              <p class="my-4">Everything is so well structured and simple to use (I've learnt so much about Figma by
-                just using the toolkit).</p>
-              <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up
-                your next application."</p>
-            </blockquote>
-            <figcaption class="flex justify-center items-center space-x-3">
-              <img class="w-9 h-9 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
-              <div class="space-y-0.5 font-medium text-left">
-                <div>Jese Leos</div>
-                <div class="text-sm font-light">Software Engineer at Facebook</div>
-              </div>
-            </figcaption>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500">
+                  <h3 class="text-lg font-semibold text-gray-900">Mindblowing workflow and variants</h3>
+                  <p class="my-4">"As someone who mainly designs in the browser, I've been a casual user of Figma, but as soon as I saw and started playing with FlowBite my mind was 🤯.</p>
+                  <p class="my-4">Everything is so well structured and simple to use (I've learnt so much about Figma by just using the toolkit).</p>
+                  <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium text-left">
+                      <div>Jese Leos</div>
+                      <div class="text-sm font-light text-gray-500">Software Engineer at Facebook</div>
+                  </div>
+              </figcaption>    
           </figure>
-          <figure class="flex flex-col justify-center items-center p-8 text-center bg-primary border-gray-200 md:p-12">
-            <blockquote class="mx-auto mb-8 max-w-2xl">
-              <h3 class="text-lg font-semibold">Efficient Collaborating</h3>
-              <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the
-                best things from 2 different worlds: Figma and Tailwind.</p>
-              <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
-            </blockquote>
-            <figcaption class="flex justify-center items-center space-x-3">
-              <img class="w-9 h-9 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
-                alt="profile picture">
-              <div class="space-y-0.5 font-medium text-left">
-                <div>Joseph McFall</div>
-                <div class="text-sm font-light">CTO at Google</div>
-              </div>
-            </figcaption>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500">
+                  <h3 class="text-lg font-semibold text-gray-900">Efficient Collaborating</h3>
+                  <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.</p>
+                  <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium text-left">
+                      <div>Joseph McFall</div>
+                      <div class="text-sm font-light text-gray-500">CTO at Google</div>
+                  </div>
+              </figcaption>    
           </figure>
-        </div>
+      </div>
         <div class="text-center">
           <a href="#"
-            class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-primary rounded-lg hover:opacity-80 focus:z-10 focus:ring-4 focus:ring-gray-200 shadow-md">See
+            class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-primary focus:outline-none bg-white rounded-lg hover:opacity-80 focus:z-10 focus:ring-4 focus:ring-gray-200 shadow-md">See
             More About us</a>
         </div>
       </div>

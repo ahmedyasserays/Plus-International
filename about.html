@@ -57,6 +57,10 @@
     .swiper-pagination span {
       background-color: #cfa138;
     }
+    .header{
+      background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/global-net.webp");
+      background-size: cover;
+    }
   </style>
   <script>
     tailwind.config = {
@@ -129,7 +133,7 @@
             <li class="hidden md:block">
               <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
                 class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
-                Brandes
+                Brands
                 <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -161,20 +165,6 @@
     <div id="mega-menu-full-dropdown"
       class="bg-primary rounded-xl border border-gray-200 shadow-xl absolute top-full left-1/2 -translate-x-1/2 w-[70vw] max-w-[800px]">
       <div class="mx-auto text-gray-900 md:p-6 grid grid-cols-5 gap-4 w-full">
-        <a href="brands.html#rizpaille"
-          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
-          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
-            <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
-          </div>
-          <div class="font-semibold">Rizpaille</div>
-        </a>
-        <a href="brands.html#pectiv"
-          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
-          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
-            <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
-          </div>
-          <div class="font-semibold">Pectiv</div>
-        </a>
         <a href="brands.html#bazooka"
           class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
           <div class="aspect-square grid place-content-center w-full max-w-[70px]">
@@ -182,13 +172,23 @@
           </div>
           <div class="font-semibold">Bazooka</div>
         </a>
+        
+        <a href="brands.html#pectiv"
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
+            <img src="images/pectiv.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Pectiv</div>
+        </a>
+        
         <a href="brands.html#vivacola"
           class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
           <div class="aspect-square grid place-content-center w-full max-w-[70px]">
             <img src="images/vivikola.png" alt="brand name" class="w-full drop-shadow-md">
           </div>
-          <div class="font-semibold">Vivacola</div>
+          <div class="font-semibold">Vivikola</div>
         </a>
+
         <!-- <a href="brands.html#ipro"
           class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
           <div class="aspect-square grid place-content-center w-full max-w-[70px]">
@@ -203,20 +203,27 @@
           </div>
           <div class="font-semibold">Delice</div>
         </a>
+        <a href="brands.html#rizpaille"
+          class="flex flex-col justify-between items-center shadow-sm transition p-4 rounded-lg hover:bg-gray-200 bg-gray grow">
+          <div class="aspect-square grid place-content-center w-full max-w-[70px]">
+            <img src="images/rizpaille.png" alt="brand name" class="w-full drop-shadow-md">
+          </div>
+          <div class="font-semibold">Rizpaille</div>
+        </a>
       </div>
     </div>
   </nav>
   <!-- END NAVBAR -->
 
   <!-- START HEADER -->
-  <section class="bg-whit overflow-hidden">
+  <section class="bg-whit overflow-hidden header">
     <div class="container grid place-content-center h-screen min-h-fit">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="font-light text-gray-500 sm:text-lg" data-aos="zoom-in">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 drop-shadow-md">
             <span class="text-primary">We</span> didn't reinvent the wheel
           </h2>
-          <p>
+          <p class="font-bold">
             We are a leading Qatari based company established in 2018. Our
             main goal is focusing on various activities mainly in national and
             international trading of foodstuff products, cleaning products,
@@ -241,29 +248,24 @@
   <!-- END HEADER -->
 
   <!-- START ABOUT SECTION -->
-  <section class="about py-10 bg-gray overflow-hidden">
+  <section class="about py-10 bg-primary overflow-hidden">
     <div class="container">
-      <div class="content flex items-center flex-col md:flex-row gap-4">
+      <div class="content flex items-center flex-col md:flex-row gap-4 text-white">
         <div class="w-full md:w-1/2" data-aos="fade-right">
-          <h3 class="mb-4 text-3xl font-extrabold">About us</h3>
-          <p class="font-light text-gray-600 lg:mb-16 sm:text-xl">
-            We are a leading Qatari based company established in 2018. Our
-            main goal is focusing on various activities mainly in national and
-            international trading of foodstuff products, cleaning products,
-            hygienic products, by undertaking numerous projects that have been
-            executed with precision exceptional quality on time. We have an
-            innovative approach which adapts and grows to meet the needs of
-            our clients through qualified and professionally trained sales and
-            marketing team for business development, who have extensive
-            knowledge and experience of local opportunities in Qatar. <br />
-            We started our activities in 2018 as a proprietorship shared by
-            the founders: <br />
-            1- MOHAMED ALI GHOUILI <br />
+          <h3 class="mb-6 text-4xl font-extrabold drop-shadow-lg">About us</h3>
+          <p class="font-light lg:mb-16 sm:text-xl text-justify">We are a leading Qatari based company established in 2018. Our main goal is focusing on various activities mainly in national and international trading of foodstuff products, cleaning products, hygienic products, by undertaking numerous projects that have been executed with precision exceptional quality on time. We have an innovative approach which adapts and grows to meet the needs of our clients through qualified and professionally trained sales and marketing team for business development, who have extensive knowledge and experience of local opportunities in Qatar.
+            We started our activities in 2018 as a proprietorship shared by the founders: <br>
+            1- MOHAMED ALI GHOUILI <br>
             2- NASER ABDUL RAHMAN
+            
+            
           </p>
+          <a href="about.html"
+            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-primary rounded-lg bg-white hover:opacity-80 mt-4 focus:ring-4 focus:ring-primary">Get
+            to know us more</a>
         </div>
         <div class="img-container w-full md:w-1/2" data-aos="fade-left">
-          <img src="images/about.jfif" alt="about" class="rounded-lg shadow-md border-2 border-primary w-full" />
+          <img src="images/about.jfif" alt="about" class="rounded-lg shadow-md border-2 border-primary w-full">
         </div>
       </div>
     </div>
@@ -271,31 +273,31 @@
   <!-- END ABOUT SECTION -->
 
   <!-- START vmg SECTION -->
-  <section class="py-10 overflow-hidden">
+  <section class="py-10 mt-8 overflow-hidden">
     <div class="container grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="relative text-white w-full rounded-xl shadow-md font-light md:text-lg my-2 bg-primary p-4" data-aos="flip-right">
-        <i class="fas fa-eye absolute opacity-50 text-9xl"></i>
+      <div class="relative text-white w-full rounded-xl shadow-md font-light md:text-lg my-2 bg-primary p-4 text-center" data-aos="flip-right">
+        <i class="fas fa-eye text-9xl drop-shadow-md"></i>
         <h3 class="mb-4 text-3xl drop-shadow-md font-extrabold">Our Vision</h3>
-        <p class="font-normal">
+        <p class="font-normal text-justify">
           To be one of the leading companies in GCC. In line with Qatar’s
           national vision, we are changing the world of commerce through
           investment and innovation to leave an outstanding legacy for
           future generations.
         </p>
       </div>
-      <div class="relative text-white w-full rounded-xl shadow-md font-light md:text-lg my-2 bg-primary p-4" data-aos="flip-up">
-        <i class="fas fa-lightbulb absolute opacity-50 text-9xl"></i>
+      <div class="relative text-white w-full rounded-xl shadow-md font-light md:text-lg my-2 bg-primary p-4 text-center" data-aos="flip-up">
+        <i class="fas fa-lightbulb text-9xl drop-shadow-md"></i>
         <h3 class="mb-4 text-3xl drop-shadow-md font-extrabold">Our Mission</h3>
-        <p class="font-normal">
+        <p class="font-normal text-justify">
           We always deliver beyond expectations. We use our resources and
           expertise so that our assets thrive and reach their full
           potential.
         </p>
       </div>
-      <div class="relative text-white w-full rounded-xl shadow-md font-light md:text-lg my-2 bg-primary p-4" data-aos="flip-left">
-        <i class="fas fa-bullseye-arrow absolute opacity-50 text-9xl"></i>
+      <div class="relative text-white w-full rounded-xl shadow-md font-light md:text-lg my-2 bg-primary p-4 text-center" data-aos="flip-left">
+        <i class="fas fa-bullseye-arrow text-9xl drop-shadow-md"></i>
         <h3 class="mb-4 text-3xl drop-shadow-md font-extrabold">Our Goals</h3>
-        <p class="font-normal">
+        <p class="font-normal text-justify">
           Our goal is to bring prosperity to all our stakeholders in a corporately responsible manner. In addition,
           import our consumer products and confirm their supply and distribution at the right price in conference
           with the current trade policy of the Government.
@@ -331,6 +333,11 @@
     </div>
   </section>
   <!-- END CONTACT SECTION -->
+
+  <!-- WHATSAPP WIDGET -->
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <div class="elfsight-app-bef9634f-d570-48d5-b8d0-776f53396226"></div>
+  <!-- WHATSAPP WIDGET -->
 
   <!-- START footer -->
   <footer class="p-4 bg-gray sm:p-6">
@@ -425,3 +432,9 @@
 </body>
 
 </html>
+
+font-size: 50px;
+    color: white;
+    /* opacity: 0.5; */
+    text-shadow: 4px 2px 12px #0000004f;
+    margin-bottom: 40px;
