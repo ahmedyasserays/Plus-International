@@ -429,7 +429,7 @@
   <!-- END TESTEMONIAL -->
 
   <!-- start Social Proof -->
-  <section class="py-10">
+  <section class="py-10" id="counterDiv">
     <div class="container">
       <h2 class="mb-8 text-4xl tracking-tight font-extrabold drop-shadow-md text-center">Social Proof</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
@@ -438,8 +438,8 @@
           <i class="fas fa-star text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
             <div
-              class="text-xl md:text-2xl font-bold">
-              +5
+              class="text-xl md:text-2xl font-bold" id="brandsC">
+              <!-- +5 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
               Brands
@@ -452,8 +452,8 @@
           <i class="fas fa-shopping-bag text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
             <div
-              class="text-xl md:text-2xl font-bold">
-              +125
+              class="text-xl md:text-2xl font-bold" id="hyperC">
+              <!-- +125 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
               Hypermarkets
@@ -466,8 +466,8 @@
           <i class="fas fa-grin-beam text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
             <div
-              class="text-xl md:text-2xl font-bold">
-              +500K
+              class="text-xl md:text-2xl font-bold" id="customerC">
+              <!-- +500K -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
               Customer Satisfaction
@@ -480,8 +480,8 @@
           <i class="fas fa-glass-cheers text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
             <div
-              class="text-xl md:text-2xl font-bold">
-              +18
+              class="text-xl md:text-2xl font-bold" id="barsC">
+              <!-- +18 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
               Bars
@@ -494,8 +494,8 @@
           <i class="fas fa-utensils text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
             <div
-              class="text-xl md:text-2xl font-bold">
-              +40
+              class="text-xl md:text-2xl font-bold" id="restauC">
+              <!-- +40 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
               Restaurants
@@ -744,6 +744,7 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="counter.js" type="module"></script>
   <script>
     let pect = document.getElementById("pec");
     let pectImage = document.getElementById("pecImage")
