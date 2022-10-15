@@ -1,13 +1,13 @@
 let mmdb = document.getElementById("mega-menu-full-dropdown-button")
 let mmfd = document.getElementById("mega-menu-full-dropdown")
 let navLinks = document.querySelectorAll("#mega-menu-full > ul > li > a")
-let loading = document.querySelector(".loading")
+// let loading = document.querySelector(".loading")
 
 AOS.init();
 
-window.onload = () => {
-  loading.classList.add("hidden")
-}
+// window.onload = () => {
+//   loading.classList.add("hidden")
+// }
 
 navLinks.forEach(link => {
   if (link.pathname.slice(0, 5) == window.location.pathname.slice(0, 5)) {
