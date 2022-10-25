@@ -53,6 +53,66 @@
       background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/bgbg.jpg");
       background-size: cover;
     }
+
+    /* ---- reset ---- */
+    body {
+      margin: 0;
+      font: normal 75% Arial, Helvetica, sans-serif;
+    }
+
+    canvas {
+      display: block;
+      vertical-align: bottom;
+    }
+
+    /* ---- particles.js container ---- */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #060911;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    /* ---- stats.js ---- */
+    .count-particles {
+      background: #000022;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 80px;
+      color: #13E8E9;
+      font-size: .8em;
+      text-align: left;
+      text-indent: 4px;
+      line-height: 14px;
+      padding-bottom: 2px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .js-count-particles {
+      font-size: 1.1em;
+    }
+
+    #stats,
+    .count-particles {
+      -webkit-user-select: none;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    #stats {
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+    }
+
+    .count-particles {
+      border-radius: 0 0 3px 3px;
+    }
   </style>
   <script>
     tailwind.config = {
@@ -96,7 +156,7 @@
   <!-- END LOADING -->
 
   <!-- STAR5 NAVBAR -->
-  <nav class="bg-white z-40 fixed w-screen shadow border-b border-gray-100">
+  <nav class="bg-white z-40 fixed w-screen shadow border-b border-gray-100" style="z-index: 10001;">
     <div class="container">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="index.html" class="flex items-center">
@@ -208,18 +268,27 @@
 
   <!-- START HEADER -->
   <section class="bg-white h-screen header grid place-content-center overflow-hidden">
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div> <!-- stats - count particles -->
+    <div class="count-particles"> <span class="js-count-particles">--</span> particles </div>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
     <div class="container">
       <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 md:grid-cols-12">
         <div class="mr-auto place-self-center bg md:col-span-7" data-aos="zoom-in">
-          <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
+          <h1
+            class="text-white max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
             <span class="text-primary">Plus</span> International Trading
             Recovery
           </h1>
-          <p class="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+          <p class="max-w-2xl mb-6 font-bold text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
             Our never ending goals have revolved around the world and landed in Qatar
           </p>
           <a href="#"
-            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-primary focus:ring-4 focus:ring-primary">
+            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg bg-primary hover:bg-primary focus:ring-4 focus:ring-primary">
             Get In Touch With Us
             <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -437,8 +506,7 @@
         <div class="shadow-sm flex gap-4 items-center bg-gray p-2 md:p-4 rounded-md justify-between">
           <i class="fas fa-star text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
-            <div
-              class="text-xl md:text-2xl font-bold" id="brandsC">
+            <div class="text-xl md:text-2xl font-bold" id="brandsC">
               <!-- +5 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
@@ -451,8 +519,7 @@
         <div class="shadow-sm flex gap-4 items-center bg-gray p-2 md:p-4 rounded-md justify-between">
           <i class="fas fa-shopping-bag text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
-            <div
-              class="text-xl md:text-2xl font-bold" id="hyperC">
+            <div class="text-xl md:text-2xl font-bold" id="hyperC">
               <!-- +125 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
@@ -465,12 +532,11 @@
         <div class="shadow-sm flex gap-4 items-center bg-gray p-2 md:p-4 rounded-md justify-between">
           <i class="fas fa-grin-beam text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
-            <div
-              class="text-xl md:text-2xl font-bold" id="customerC">
+            <div class="text-xl md:text-2xl font-bold" id="customerC">
               <!-- +500K -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
-               Satisfied Customer
+              Satisfied Customer
             </h6>
           </div>
         </div>
@@ -479,8 +545,7 @@
         <div class="shadow-sm flex gap-4 items-center bg-gray p-2 md:p-4 rounded-md justify-between">
           <i class="fas fa-glass-cheers text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
-            <div
-              class="text-xl md:text-2xl font-bold" id="barsC">
+            <div class="text-xl md:text-2xl font-bold" id="barsC">
               <!-- +18 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
@@ -493,8 +558,7 @@
         <div class="shadow-sm flex gap-4 items-center bg-gray p-2 md:p-4 rounded-md justify-between">
           <i class="fas fa-utensils text-center text-primary text-5xl drop-shadow-md"></i>
           <div class="w-full">
-            <div
-              class="text-xl md:text-2xl font-bold" id="restauC">
+            <div class="text-xl md:text-2xl font-bold" id="restauC">
               <!-- +40 -->+ <span>0</span>
             </div>
             <h6 class="font-light text-gray-500 sm:text-xl">
@@ -714,8 +778,8 @@
         </div>
         <hr class="my-6 border-gray-300 sm:mx-auto lg:my-8" />
         <div class="flex items-center sm:justify-between flex-col gap-4 text-center sm:text-left sm:flex-row">
-          <span class="text-sm text-gray-500 sm:text-center">© 2022 <a href="/"
-              class="hover:underline">Plus Trading</a>. All Rights Reserved.
+          <span class="text-sm text-gray-500 sm:text-center">© 2022 <a href="/" class="hover:underline">Plus
+              Trading</a>. All Rights Reserved.
           </span>
           <div class="flex space-x-6 sm:justify-center sm:mt-0">
             <a href="#" class="text-gray-500 hover:text-gray-900">
@@ -754,6 +818,76 @@
     pect.onmouseleave = () => {
       pectImage.classList.add("invert")
     }
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#cfa138"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#cfa138"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#cfa138",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true
+    }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
   </script>
 </body>
 
