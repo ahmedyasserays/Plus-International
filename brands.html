@@ -67,8 +67,21 @@
       background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), rgba(255, 214, 117, 0.6)), url("images/rizpaille-bg.jpg");
     }
 
-    #checks{
+    #checks {
       background-image: linear-gradient(to bottom, rgba(255, 214, 117, 0.6), rgba(255, 214, 117, 0.6)), url("images/che.png");
+    }
+
+    .img-c {
+      position: relative;
+      padding-top: 100%;
+    }
+
+    .img-c img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
     }
   </style>
   <script>
@@ -254,7 +267,11 @@
           stores.
         </p>
       </div>
-      <img src="images/bazooka.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name" data-aos="zoom-in-right">
+      <div class="w-full md:w-1/2">
+        <div class="img-c" data-aos="zoom-in-right">
+          <img src="images/bazooka.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name" >
+        </div>
+      </div>
     </section>
     <!-- END brand one -->
     <!-- start brand two -->
@@ -273,7 +290,11 @@
           sanitary pads with the latest technology reached by science.
         </p>
       </div>
-      <img src="images/pectiv.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name" data-aos="zoom-in-left">
+      <div class="w-full md:w-1/2">
+        <div class="img-c" data-aos="zoom-in-left">
+          <img src="images/pectiv.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name">
+        </div>
+      </div>
     </section>
     <!-- END brand two -->
     <!-- start brand three -->
@@ -289,25 +310,37 @@
           restaurants already have Vivi Kola in their range.
         </p>
       </div>
-      <img src="images/vivikola.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name" data-aos="zoom-in-right">
+      <div class="w-full md:w-1/2">
+        <div class="img-c" data-aos="zoom-in-right">
+          <img src="images/vivikola.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name">
+        </div>
     </section>
     <!-- END brand three -->
     <!-- start brand four -->
-    <section class="p-6 md:p-12 flex items-center flex-col md:flex-row brand rounded-2xl shadow-xl border border-primary my-12" id="checks">
-    <div class="container flex items-center flex-col md:flex-row">
-      <div class="content w-full md:w-1/2 p-4 md:border-r md:pr-4" data-aos="zoom-in-right">
-        <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">CHECK’S</h4>
-        <p class="font-light lg:mb-16 sm:text-xl mb-2">
-          CHECK’S Chewing Gum is made in Spain by CHICKLES GUM, a specialized European chewing gum manufacturer. The company is the market leader in Spain, where both the production and packaging facilities are located. Their products stand out for the high levels of quality, in production standards, in the usability and convenience of their packaging, and in the sensory appeal of their long-lasting flavors. CHECK’S brand is gaining recognition globally, and quickly positioning them as one of the most promising players competing in this highly profitable market
-        </p>
+    <section
+      class="p-6 md:p-12 flex items-center flex-col md:flex-row brand rounded-2xl shadow-xl border border-primary my-12"
+      id="checks">
+      <div class="container flex items-center flex-col md:flex-row">
+        <div class="content w-full md:w-1/2 p-4 md:border-r md:pr-4" data-aos="zoom-in-right">
+          <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">CHECK’S</h4>
+          <p class="font-light lg:mb-16 sm:text-xl mb-2">
+            CHECK’S Chewing Gum is made in Spain by CHICKLES GUM, a specialized European chewing gum manufacturer. The
+            company is the market leader in Spain, where both the production and packaging facilities are located. Their
+            products stand out for the high levels of quality, in production standards, in the usability and convenience
+            of their packaging, and in the sensory appeal of their long-lasting flavors. CHECK’S brand is gaining
+            recognition globally, and quickly positioning them as one of the most promising players competing in this
+            highly profitable market
+          </p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="img-c" data-aos="zoom-in-left">
+            <img src="images/check's-logo.png" class="w-full md:w-[40%] mx-auto drop-shadow-md" alt="brand name">
+          </div>
       </div>
-      <img src="images/check's-logo.png" class="w-full md:w-[40%] mx-auto drop-shadow-md" alt="brand name"
-        data-aos="zoom-in-left">
-    </div>
-  </section>
+    </section>
     <!-- END brand four -->
     <!-- start brand five -->
-    <section
+    <!-- <section
       class="p-6 md:p-12 flex items-center flex-col md:flex-row-reverse brand rounded-2xl shadow-xl border border-primary my-12"
       id="vitaminc">
       <div class="content w-full md:w-1/2 p-4 md:border-l md:pl-4" data-aos="zoom-in-left">
@@ -317,6 +350,22 @@
         </p>
       </div>
       <img src="images/vitamin-c.png" class="w-full md:w-1/2 drop-shadow-md px-4" alt="brand name" data-aos="zoom-in-right">
+    </section> -->
+    <section
+      class="p-6 md:p-12 flex items-center flex-col md:flex-row-reverse brand rounded-2xl shadow-xl border border-primary my-12"
+      id="vivacola">
+      <div class="content w-full md:w-1/2 p-4 md:border-l md:pl-4" data-aos="zoom-in-left">
+        <h4 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black">Vitamin C</h4>
+        <p class="font-light lg:mb-16 sm:text-xl mb-2">
+          A functional and tasty vitamin drink produced by NG DRINK Germany, CHEETAH Vitamin C (250 ml) is an essential
+          nutrient, it’s possible to have much of it, Vitamin C supports normal growth and development and helps your
+          body absorb iron, Vitamin C is packed with Vitamins C, B2, B6 and B12, carbonated for added refreshment.
+        </p>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="img-c" data-aos="zoom-in-right">
+          <img src="images/vitamin-c.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name">
+        </div>
     </section>
     <!-- END brand five -->
     <!-- start brand six -->
@@ -332,7 +381,11 @@
           and Asian « white » noodles that are traditionally made from rice paste.
         </p>
       </div>
-      <img src="images/rizpaille.png" class="w-full md:w-1/2 drop-shadow-md" alt="brand name" data-aos="zoom-in-left">
+      <div class="w-full md:w-1/2">
+      <div class="img-c" data-aos="zoom-in-left">
+        <img src="images/rizpaille.png" class="drop-shadow-md" alt="brand name">
+      </div>
+    </div>
     </section>
   </div>
 
@@ -387,10 +440,12 @@
                   <a href="https://wa.me/+97433189999" class="hover:underline">Whatsapp</a>
                 </li>
                 <li class="mb-2">
-                  <a href="https://www.linkedin.com/in/plus-international-trading-5ba72524a" class="hover:underline">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/plus-international-trading-5ba72524a"
+                    class="hover:underline">LinkedIn</a>
                 </li>
                 <li class="mb-2">
-                  <a href="https://instagram.com/plusinternational.qa?igshid=YmMyMTA2M2Y=" class="hover:underline">Instagram</a>
+                  <a href="https://instagram.com/plusinternational.qa?igshid=YmMyMTA2M2Y="
+                    class="hover:underline">Instagram</a>
                 </li>
               </ul>
             </div>
@@ -416,13 +471,15 @@
             <a href="https://www.facebook.com/PitQa" class="text-gray-500 hover:text-gray-900" target="_blank">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com/plusinternational.qa?igshid=YmMyMTA2M2Y=" class="text-gray-500 hover:text-gray-900" target="_blank">
+            <a href="https://instagram.com/plusinternational.qa?igshid=YmMyMTA2M2Y="
+              class="text-gray-500 hover:text-gray-900" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
             <a href="https://wa.me/+97433189999" class="text-gray-500 hover:text-gray-900" target="_blank">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://www.linkedin.com/in/plus-international-trading-5ba72524a" class="text-gray-500 hover:text-gray-900" target="_blank">
+            <a href="https://www.linkedin.com/in/plus-international-trading-5ba72524a"
+              class="text-gray-500 hover:text-gray-900" target="_blank">
               <i class="fab fa-linkedin-in"></i>
             </a>
           </div>
